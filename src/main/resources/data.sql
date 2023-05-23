@@ -1,3 +1,1 @@
-INSERT INTO product (name, price) VALUES ('Car',20000.0);
-INSERT INTO product (name, price) VALUES ('Iphone',1200.0);
-INSERT INTO product (name, price) VALUES ('Watch',300.0);
+INSERT INTO BOOK (id, title, author, edition_year, isbn, publisher) VALUES (1L, 'Book Title 1', 'Author Name 1', 2023, 'ISBN1234567891',  'Penguin');
