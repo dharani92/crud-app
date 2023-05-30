@@ -3,7 +3,7 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 
 # Simply the artifact path
-ARG artifact=target/spring-boot-web.jar
+ARG artifact=target/CrudApp-1.0-SNAPSHOT.jar
 
 WORKDIR /opt/app
 
