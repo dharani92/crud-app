@@ -54,7 +54,7 @@ pipeline {
                     git config user.email "dharanikumar2051992@gmail.com"
                     git config user.name "dharani92"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    git reset --hard HEAD^
+                    git reset --hard
                     git checkout master
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" deployment.yml
                     git add deployment.yml
