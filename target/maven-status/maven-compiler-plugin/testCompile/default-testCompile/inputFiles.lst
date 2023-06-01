@@ -1,2 +1,2 @@
-/var/lib/jenkins/workspace/pipeline-demo@2/src/test/java/com/interview/prep/controller/BookControllerTest.java
-/var/lib/jenkins/workspace/pipeline-demo@2/src/test/java/com/interview/prep/service/BookServiceImplTest.java
+/var/lib/jenkins/workspace/pipeline-demo/src/test/java/com/interview/prep/service/BookServiceImplTest.java
+/var/lib/jenkins/workspace/pipeline-demo/src/test/java/com/interview/prep/controller/BookControllerTest.java
