@@ -55,7 +55,6 @@ pipeline {
                     git config user.name "dharani92"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     git reset --hard
-                    git checkout master
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" deployment.yml
                     git add deployment.yml
                     git commit -a -m "Update deployment image to version ${BUILD_NUMBER}"
