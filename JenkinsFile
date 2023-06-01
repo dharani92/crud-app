@@ -8,7 +8,6 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-//         git branch: 'master', url: 'https://github.com/dharani92/crud-app.git'
         sh 'echo passed'
       }
     }
@@ -32,7 +31,6 @@ pipeline {
     stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "dharani92/ultimate-cicd:${BUILD_NUMBER}"
-        // DOCKERFILE_LOCATION = "java-maven-sonar-argocd-helm-k8s/spring-boot-app/Dockerfile"
         REGISTRY_CREDENTIALS = credentials('docker-cred')
       }
       steps {
@@ -56,11 +54,11 @@ pipeline {
                     git config user.email "dharanikumar2051992@gmail.com"
                     git config user.name "dharani92"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    pwd
-                    ls
+                    git reset --hard HEAD^
+                    git checkout master
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" deployment.yml
                     git add deployment.yml
-                    git commit -m "Update deployment image to version ${BUILD_NUMBER}"
+                    git commit -a -m "Update deployment image to version ${BUILD_NUMBER}"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:master
                 '''
             }
