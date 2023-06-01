@@ -54,10 +54,7 @@ pipeline {
                     git config user.email "dharanikumar2051992@gmail.com"
                     git config user.name "dharani92"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sh """
-                    sed 's/image:.*/image: dharani92\\/ultimate-cicd:\${BUILD_NUMBER}/g' deployment.yml > deployment.tmp
-                    mv deployment.tmp deployment.yml
-                    """
+                    sed -i "s/ultimate-cicd:*/ultimate-cicd:${BUILD_NUMBER}/g" deployment.yml
                     git add deployment.yml
                     cat deployment.yml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
