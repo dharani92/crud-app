@@ -3,7 +3,7 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 
 # Simply the artifact path
-ARG artifact=target/CrudApp-1.0-SNAPSHOT.jar
+ARG artifact=target/CrudApp-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 WORKDIR /opt/app
 
