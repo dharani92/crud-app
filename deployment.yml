@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: crud-app
-          image: dharani92/ultimate-cicd:17
+          image: dharani92/ultimate-cicd:replaceImageTag
           ports:
             - containerPort: 8080
