@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'master', url: 'https://github.com/dharani92/crud-app.git'
+//         git branch: 'master', url: 'https://github.com/dharani92/crud-app.git'
         sh 'echo passed'
       }
     }
